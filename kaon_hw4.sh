@@ -63,8 +63,7 @@ bash kaon_hw4_wget.sh $year
 if [[ $? -eq 0 ]]
 then
 	echo "There was an error retrieving the file from wget" >&2
-else
-	echo "File retreived successfully"
+	exit 2
 fi
 
 
