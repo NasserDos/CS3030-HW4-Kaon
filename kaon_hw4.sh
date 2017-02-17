@@ -51,8 +51,20 @@ do
 done
 
 # Check for required arguments
-if [[ -z $year || -z $email ]]; then
+if [[ -z $year || -z $email ]]
+then
 	usage
+fi
+
+
+# Get file from wget
+bash kaon_hw4_wget.sh $year
+
+if [[ $? -eq 0 ]]
+then
+	echo "There was an error retrieving the file from wget" >&2
+else
+	echo "File retreived successfully"
 fi
 
 
