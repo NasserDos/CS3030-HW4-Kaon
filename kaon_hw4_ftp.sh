@@ -52,9 +52,15 @@ do
 done
 
 # Check for required arguments
-if [[ -z $year || -z $email ]]
+if [[ -z $file ]]
 then
 	usage
+fi
+
+# Determine if the user provided credentials
+if [[ -z $user && -z $passwd ]]
+then
+	echo "Credentials provided"
 fi
 
 
