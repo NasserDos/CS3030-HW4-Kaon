@@ -35,7 +35,7 @@ then
 fi
 
 # Get command-line options
-while getopts ":u:p:" opt
+while getopts ":f:u:p:" opt
 do
 	case $opt in
 		f)	file=$OPTARG
@@ -58,8 +58,10 @@ then
 fi
 
 # Determine if the user provided credentials
-if [[ -z $user && -z $passwd ]]
+if [[ -z $user || -z $passwd ]]
 then
+	echo "Anonymous"
+else
 	echo "Credentials provided"
 fi
 
