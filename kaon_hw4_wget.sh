@@ -19,6 +19,9 @@
 
 #set -o nounset                              # Treat unset variables as an error
 
+
+target=http://icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$1.tar.gz
+
 help(){
  echo "Usage   ./kaon_hw4_wget.sh <input> "
 
@@ -31,6 +34,7 @@ help(){
 
 # if file exists DOWNLOAD , PRINT CONFIRMATION , otherwise print it failed 
 
-wget -q --spider http://icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$1.tar.gz && wget -q http://icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$1.tar.gz && echo File Downloaded successfully || echo File does not exits
+
+wget -q --spider $target && wget -q $target && echo File Downloaded successfully || echo File does not exits
 
 exit 0
