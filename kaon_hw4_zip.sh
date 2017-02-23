@@ -19,7 +19,9 @@
 
 #set -o nounset                              # Treat unset variables as an error
 
-zip MOCK_DATA_FILTER_YYYY_MM_DD_HH:MM.zip *
+timestamp=`date +%Y_%m_%d_%H:%M`
+
+zip "MOCK_DATA_FILTER_$timestamp.zip" *
 
 exit 0
 
