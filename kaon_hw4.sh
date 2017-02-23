@@ -90,5 +90,8 @@ then
 fi
 
 
+#Very Last Thing (Commented out so we can test other files) Cleans the Mess
+#./kaon_hw4_clean.sh
+
 exit 0
 
