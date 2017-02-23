@@ -21,9 +21,8 @@
 
 # Usage information
 usage() {
-	echo "Usage $0 -y <year> -e <email> [-u <user> -p <passwd>] "
-	echo "    -y    The year of the file (required)"
-	echo "    -e    The e-mail address to send the final notification to (required)"
+	echo "Usage $0 -f <file> [-u <user> -p <passwd>] "
+	echo "    -f    The name of the file to upload"
 	echo "    -u    The FTP username"
 	echo "    -p    The FTP password"
 	exit 1
@@ -39,6 +38,8 @@ fi
 while getopts ":u:p:" opt
 do
 	case $opt in
+		f)	file=$OPTARG
+			;;
 		u)	user=$OPTARG
 			;;
 		p)	passwd=$OPTARG
