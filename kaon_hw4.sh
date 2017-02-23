@@ -58,11 +58,34 @@ fi
 
 
 # Get file from wget
-bash kaon_hw4_wget.sh $year
-
-if [[ $? -eq 0 ]]
+if [[ $year != 2015 && $year != 2016 ]]
+then
+	echo "Incorrect year, input 2015 or 2016"
+	usage
+fi
+if [[ $year == 2015 ]]
+then
+	year2=2016
+	./kaon_hw4_wget.sh $year
+	./kaon_hw4_wget.sh $year2
+else
+	year2=2015
+	./kaon_hw4_wget.sh $year
+	./kaon_hw4_wget.sh $year2
+fi
+if [[ $? -eq 1 ]]
 then
 	echo "There was an error retrieving the file from wget" >&2
+	exit 2
+fi
+
+
+# Expand Files
+./kaon_hw4_expand.sh
+
+if [[ $? -eq 1 ]]
+then
+	echo "There was an error expanding the files" >&2
 	exit 2
 fi
 
