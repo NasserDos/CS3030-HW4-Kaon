@@ -19,6 +19,43 @@
 
 #set -o nounset                              # Treat unset variables as an error
 
+# Usage information
+usage() {
+	echo "Usage $0 -y <year> -e <email> [-u <user> -p <passwd>] "
+	echo "    -y    The year of the file (required)"
+	echo "    -e    The e-mail address to send the final notification to (required)"
+	echo "    -u    The FTP username"
+	echo "    -p    The FTP password"
+	exit 1
+}
+
+# Help parameter
+if [[ $1 == "--help" ]]
+then
+	usage
+fi
+
+# Get command-line options
+while getopts ":u:p:" opt
+do
+	case $opt in
+		u)	user=$OPTARG
+			;;
+		p)	passwd=$OPTARG
+			;;
+		# Checks for illegal options
+		\?)	usage
+			exit 1
+			;;
+	esac
+done
+
+# Check for required arguments
+if [[ -z $year || -z $email ]]
+then
+	usage
+fi
+
 
 
 exit 0

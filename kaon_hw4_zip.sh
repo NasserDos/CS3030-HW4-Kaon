@@ -1,9 +1,9 @@
 #!/bin/bash - 
 #===============================================================================
 #
-#          FILE: kaon_hw4_compress.sh
+#          FILE: kaon_hw4_zip.sh
 # 
-#         USAGE: ./kaon_hw4_compress.sh 
+#         USAGE: ./kaon_hw4_zip.sh 
 # 
 #   DESCRIPTION: 
 # 
