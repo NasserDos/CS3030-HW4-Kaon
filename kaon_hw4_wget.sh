@@ -30,7 +30,7 @@ help(){
 #-q will silence the messages associated with wget 
 # --spider will check if the file exists (200 OK if exists)
 # && will execute if the test before it is true 
-# || will execute if the test before it is fails
+# || will execute if the test before it is false
 
 # if file exists DOWNLOAD , PRINT CONFIRMATION , otherwise print it failed 
 
