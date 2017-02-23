@@ -89,6 +89,15 @@ then
 	exit 2
 fi
 
+#Loop for shortening Files
+ts=`date +%Y_%m_%d_%H:%M`
+for i in temp/*
+do
+	./kaon_hw4.awk $i >> temp/MOCK_DATA_FILTER_$ts.txt
+done
+
+#Zip the Final File
+./kaon_hw4_zip.sh
 
 #Very Last Thing (Commented out so we can test other files) Cleans the Mess
 #./kaon_hw4_clean.sh

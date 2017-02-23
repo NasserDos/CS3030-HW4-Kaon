@@ -41,7 +41,11 @@ then
 	usage
 fi
 
-mkdir temp
+if [[ ! -d temp ]]
+then
+	mkdir temp
+fi
+
 tar -xzf $target -C temp
 tar -xzf $target2 -C temp
 

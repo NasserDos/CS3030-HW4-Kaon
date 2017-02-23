@@ -5,7 +5,7 @@
 # 
 #         USAGE: ./kaon_hw4_zip.sh 
 # 
-#   DESCRIPTION: 
+#   DESCRIPTION: Zips the final folder.
 # 
 #       OPTIONS: ---
 #  REQUIREMENTS: ---
@@ -21,7 +21,7 @@
 
 timestamp=`date +%Y_%m_%d_%H:%M`
 
-zip "MOCK_DATA_FILTER_$timestamp.zip" *
+zip temp/MOCK_DATA_FILTER_$timestamp.zip temp/MOCK_DATA_FILTER_$timestamp.txt
 
 exit 0
 
