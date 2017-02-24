@@ -105,7 +105,7 @@ fi
 ./kaon_hw4_zip.sh
 if [[ $? -eq 1 ]]
 then
-	echo "There was an error expanding the zipping." >&2
+	echo "There was an error zipping the file." >&2
 	exit 2
 fi
 
@@ -123,9 +123,10 @@ then
 fi
 
 #Email success message to disignated email address
+ftpServ=`hostname`
 echo "Sending email to $email"
 mail -s "Successful!" $email << END_MAIL
-Successfully transferred file to FTP $hostname server
+Successfully transferred file to FTP $ftpServ server
 END_MAIL
 
 #Very Last Thing (Commented out so we can test other files) Cleans the Mess
