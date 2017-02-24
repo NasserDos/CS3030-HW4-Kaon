@@ -62,11 +62,10 @@ if [[ -z $user || -z $passwd ]]
 then
 	echo "Anonymous"
 	user="anonymous"
-	passwd="\n"
+	passwd="anonymous"
 else
 	echo "Credentials provided"
 fi
-
 ftp -niv `hostname` <<EOT
 user $user $passwd
 ls

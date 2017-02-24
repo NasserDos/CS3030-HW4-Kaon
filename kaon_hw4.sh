@@ -75,7 +75,7 @@ else
 fi
 if [[ $? -eq 1 ]]
 then
-	echo "There was an error retrieving the file from wget" >&2
+	echo "There was an error retrieving the file from wget." >&2
 	exit 2
 fi
 
@@ -85,7 +85,7 @@ fi
 
 if [[ $? -eq 1 ]]
 then
-	echo "There was an error expanding the files" >&2
+	echo "There was an error expanding the files." >&2
 	exit 2
 fi
 
@@ -95,12 +95,46 @@ for i in temp/*
 do
 	./kaon_hw4.awk $i >> temp/MOCK_DATA_FILTER_$ts.txt
 done
+if [[ $? -eq 1 ]]
+then
+	echo "There was an error shortening the files." >&2
+	exit 2
+fi
 
 #Zip the Final File
 ./kaon_hw4_zip.sh
+if [[ $? -eq 1 ]]
+then
+	echo "There was an error expanding the zipping." >&2
+	exit 2
+fi
+
+#FTP to server.
+if [[ ! -z $user && ! -z $passwd ]]
+then
+	./kaon_hw4_ftp.sh -f temp/MOCK_DATA_FILTER_$ts.zip -u $user -p $passwd
+else
+	./kaon_hw4_ftp.sh -f temp/MOCK_DATA_FILTER_$ts.zip
+fi
+if [[ $? -eq 1 ]]
+then
+	echo "There was an error FTPing to the server." >&2
+	exit 2
+fi
+
+#Email success message to disignated email address
+echo "Sending email to $email"
+mail -s "Successful!" $email << END_MAIL
+Successfully transferred file to FTP $hostname server
+END_MAIL
 
 #Very Last Thing (Commented out so we can test other files) Cleans the Mess
-#./kaon_hw4_clean.sh
+./kaon_hw4_clean.sh
+if [[ $? -eq 1 ]]
+then
+	echo "There was an error cleaning the mess." >&2
+	exit 2
+fi
 
 exit 0
 
