@@ -1,0 +1,216 @@
+commit a480e5b635d423e2e5f02d5d3dc300821657b9bf
+Merge: b375c0c 65c7fdb
+Author: Trevor Orgill <trevororgill@weber.edu>
+Date:   Thu Feb 23 15:03:11 2017 -0700
+
+    Merge branch 'master' of https://github.com/NasserDos/CS3030-HW4-Kaon
+
+commit b375c0c41190309936b7f7b47ed0c9f29f1b1976
+Author: Trevor Orgill <trevororgill@weber.edu>
+Date:   Thu Feb 23 15:02:55 2017 -0700
+
+    Add AWK to wrapper along with zipping of the file.
+
+commit 65c7fdb27c908cc7d90a4c2216d713dea070a7fe
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Thu Feb 23 14:16:02 2017 -0700
+
+    Added FTP command
+
+commit 97f1ec815c3f0def4085cd87404578f466149823
+Merge: e048392 8d5896b
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Thu Feb 23 13:27:44 2017 -0700
+
+    Merge branch 'master' of github.com:NasserDos/CS3030-HW4-Kaon
+
+commit e04839275413ecc599c21bd3bc88e26dad059571
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Thu Feb 23 13:27:29 2017 -0700
+
+    Check ftp args for credentials
+
+commit 8d5896b0ba9bc33e5504220f7eca657118fc5bdc
+Merge: 50a3ec8 5a564e6
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Thu Feb 23 13:25:36 2017 -0700
+
+    Merge pull request #5 from NasserDos/Nasser
+    
+    Nasser
+
+commit 5a564e615a9d403d853adae70cbe17e6c84bdaae
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Thu Feb 23 13:24:43 2017 -0700
+
+    Delete kaon_hw4_expand.sh
+
+commit 50a3ec801e78998ba07fa61354cf9dd73be8b2c5
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Thu Feb 23 13:23:40 2017 -0700
+
+    FTP parameters
+
+commit e9f70360cdb1559e820aa96634921bbb8c318f0a
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Thu Feb 23 13:21:02 2017 -0700
+
+    FTP parameters
+
+commit f264f71641f8c77e4d577f0a22cf231042081eda
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Thu Feb 23 13:18:12 2017 -0700
+
+    Started zip
+
+commit 80eac2a74c2a301e3cb898fe62c045480f3d73f5
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Thu Feb 23 13:16:30 2017 -0700
+
+    .awk ready to use
+
+commit 1e96610c521a61da1b912c21bc86b9449dbbedd1
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Thu Feb 23 13:12:50 2017 -0700
+
+    Started ftp
+
+commit c03186f74f157a3bf9cb2ed5952f40c51e8662db
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Thu Feb 23 12:47:14 2017 -0700
+
+    Added ftp script
+
+commit 9121f0b687bbef792b16dd2031595bd86a768987
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Thu Feb 23 12:45:25 2017 -0700
+
+    Added zip
+
+commit 4c83785a90dabf6c5b0718d7651b372dd77cb20d
+Author: Trevor Orgill <trevororgill@weber.edu>
+Date:   Thu Feb 23 11:09:14 2017 -0700
+
+    Added kaon_hw4_clean.sh, the script to clean up the mess
+
+commit dffd0fdfa7306ee637ed5e357c4418e9f60eb8b6
+Author: Trevor Orgill <trevororgill@weber.edu>
+Date:   Thu Feb 23 10:56:19 2017 -0700
+
+    Added kaon_hw4_expand.sh and adjusted a few files to make it work.
+
+commit 33c9a856dcc5aff05c37e7f87adb042c5b4b41be
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Thu Feb 23 10:45:19 2017 -0700
+
+    Create .awk & expand.sh , currently functioning
+
+commit 5f8f8309573cb266552af0ce428d28ad75fce14f
+Merge: d4cbafa 07ccad3
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Wed Feb 22 23:11:05 2017 -0700
+
+    Merge branch 'Nasser' of https://github.com/NasserDos/CS3030-HW4-Kaon into Nasser
+
+commit d4cbafa602102bc9dace387687d58a003abcaf14
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Wed Feb 22 23:10:24 2017 -0700
+
+    updated README
+
+commit 29fcf4373b0ad62bc046dbda1a21c1ade4ae9329
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Wed Feb 22 22:21:06 2017 -0700
+
+    Update kaon_hw4_wget.sh
+
+commit c40d896c9485bffffc2ab968b9444b216df1b8cc
+Merge: 2157154 07ccad3
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Wed Feb 22 22:19:25 2017 -0700
+
+    Merge pull request #4 from NasserDos/Nasser
+    
+    cleaning up code
+
+commit 07ccad3cf987c76d9c78faa294ac465380c4c879
+Merge: 1b724e0 2157154
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Wed Feb 22 22:18:09 2017 -0700
+
+    Merge pull request #3 from NasserDos/master
+    
+    made code more readable
+
+commit 1b724e0d4357be1066120b1e9736bd0c4accdbdf
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Wed Feb 22 22:13:54 2017 -0700
+
+    making the code easier to read
+
+commit 215715426c4ed6e99718855e1b5edec9253cec98
+Merge: 2d8c829 1121adc
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Wed Feb 22 22:09:31 2017 -0700
+
+    Merge pull request #2 from NasserDos/Nasser
+    
+    wget scrpit completed
+
+commit 3b20c46ce721a813ea6a7a27d2dad47aacd3044c
+Merge: 1121adc 2d8c829
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Wed Feb 22 22:06:27 2017 -0700
+
+    Merge branch 'master' into Nasser
+
+commit 1121adc68938b76cbf37cbcfe5057f726ab4199c
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Wed Feb 22 22:03:14 2017 -0700
+
+    wget scrpit completed
+
+commit 2d8c82941c996cb16e5f33e1b99a0f8218de2706
+Merge: 74746c6 76fd253
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Wed Feb 22 21:29:56 2017 -0700
+
+    Merge pull request #1 from NasserDos/Nasser
+    
+    wget script
+
+commit 76fd253d1d218253c6c6b7f75a4825c4155d8c03
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Wed Feb 22 21:29:23 2017 -0700
+
+    wget script
+
+commit 74746c66493f6e0a10d2efe7c89f7e2b303c631d
+Author: Jeremy Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Fri Feb 17 15:13:29 2017 -0700
+
+    Main script
+
+commit 3e13431d12ea803b42e4c2c9f93dc5f2b7b15533
+Author: Jeremy Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Fri Feb 17 15:07:31 2017 -0700
+
+    Main script
+
+commit 2ed76a970bf61ebb100099f77032bb0ebdb403ab
+Author: Jeremy Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Fri Feb 17 14:07:34 2017 -0700
+
+    Added main script
+
+commit c8d64d7b626fbf4034ccd3de779639789c07c261
+Author: Jeremy Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Fri Feb 17 14:07:14 2017 -0700
+
+    Added .gitignore
+
+commit 31fb25f581aa85025ad508a7d398f922c9448879
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Tue Feb 14 12:52:17 2017 -0700
+
+    Initial commit
