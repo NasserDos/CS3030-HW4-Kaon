@@ -1,3 +1,34 @@
+commit b9095187527130702f74d506ee665ac42e74edca
+Author: Trevor Orgill <trevororgill@weber.edu>
+Date:   Fri Feb 24 09:57:54 2017 -0700
+
+    Fixed up README
+
+commit 6a65a05706dfd9f105106f200b90f855818439b1
+Author: Trevor Orgill <trevororgill@weber.edu>
+Date:   Fri Feb 24 09:56:00 2017 -0700
+
+    Updated ReadMe, fixed Email
+
+commit c7e457789381d366c025b159995e8b216b0390cb
+Merge: 4f4e199 091bfe8
+Author: Trevor Orgill <trevororgill@weber.edu>
+Date:   Fri Feb 24 09:32:32 2017 -0700
+
+    Merge branch 'master' of https://github.com/NasserDos/CS3030-HW4-Kaon
+
+commit 4f4e19912dff1a60e1a03ec91167bd9a253a41aa
+Author: Trevor Orgill <trevororgill@weber.edu>
+Date:   Fri Feb 24 09:31:05 2017 -0700
+
+    Implemented ftp, as well as added email on success to designated email, uncommented clean up
+
+commit 091bfe83067eccceb1b866c1aec6b5f9b1242a9b
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Fri Feb 24 08:22:47 2017 -0700
+
+    log file added
+
 commit a480e5b635d423e2e5f02d5d3dc300821657b9bf
 Merge: b375c0c 65c7fdb
 Author: Trevor Orgill <trevororgill@weber.edu>

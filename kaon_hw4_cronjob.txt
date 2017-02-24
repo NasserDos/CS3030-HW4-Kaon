@@ -1,0 +1,1 @@
+0 8-17/7 1-6 * * ./kaon_hw4.sh -e waldo@example.com -y 2015
