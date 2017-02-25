@@ -12,6 +12,8 @@
 #          BUGS: ---
 #         NOTES: ---
 #        AUTHOR: Jeremy Johnson (), jeremyjohnson7@mail.weber.edu
+#                Nasser Binshabeeb, nasserbinshabeeb@mail.weber.edu
+#                Trevor Orgill, trevororgill@mail.weber.edu
 #  ORGANIZATION: WSU
 #       CREATED: 02/23/2017 11:33
 #      REVISION:  ---

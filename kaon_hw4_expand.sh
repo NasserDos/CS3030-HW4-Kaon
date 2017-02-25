@@ -13,7 +13,7 @@
 #         NOTES: --- 
 #       AUTHORS: Jeremy Johnson, jeremyjohnson7@mail.weber.edu
 #                Nasser Binshabeeb, nasserbinshabeeb@mail.weber.edu
-#                Trevor Orgill, __USERNAME__@mail.weber.edu
+#                Trevor Orgill, trevororgill@mail.weber.edu
 #  ORGANIZATION: WSU
 #       CREATED: 02/23/2017 09:57
 #      REVISION:  ---
