@@ -73,7 +73,8 @@ else
 	./kaon_hw4_wget.sh $year
 	./kaon_hw4_wget.sh $year2
 fi
-if [[ $? -eq 1 ]]
+
+if [[ ! $? ]]
 then
 	echo "There was an error retrieving the file from wget." >&2
 	exit 2
@@ -83,7 +84,7 @@ fi
 # Expand Files
 ./kaon_hw4_expand.sh
 
-if [[ $? -eq 1 ]]
+if [[ ! $? ]]
 then
 	echo "There was an error expanding the files." >&2
 	exit 2
@@ -95,7 +96,7 @@ for i in temp/*
 do
 	./kaon_hw4.awk $i >> temp/MOCK_DATA_FILTER_$ts.txt
 done
-if [[ $? -eq 1 ]]
+if [[ ! $? ]]
 then
 	echo "There was an error shortening the files." >&2
 	exit 2
@@ -103,7 +104,7 @@ fi
 
 #Zip the Final File
 ./kaon_hw4_zip.sh
-if [[ $? -eq 1 ]]
+if [[ ! $? ]]
 then
 	echo "There was an error zipping the file." >&2
 	exit 2
@@ -116,7 +117,8 @@ then
 else
 	./kaon_hw4_ftp.sh -f temp/MOCK_DATA_FILTER_$ts.zip
 fi
-if [[ $? -eq 1 ]]
+
+if [[ ! $? ]]
 then
 	echo "There was an error FTPing to the server." >&2
 	exit 2
@@ -131,7 +133,7 @@ END_MAIL
 
 #Very Last Thing (Commented out so we can test other files) Cleans the Mess
 ./kaon_hw4_clean.sh
-if [[ $? -eq 1 ]]
+if [[ ! $? ]]
 then
 	echo "There was an error cleaning the mess." >&2
 	exit 2

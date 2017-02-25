@@ -65,17 +65,30 @@ then
 	echo "Anonymous"
 	user="anonymous"
 	passwd="anonymous"
+	dir="cd MockData"
 else
 	echo "Credentials provided"
+	dir=""
 fi
-ftp -niv `hostname` <<EOT
+
+# Transfer the file
+# ftplog=`ftp -niv "137.190.19.91" <<EOT
+ftp -niv "137.190.19.91" > ftp.log <<EOT
 user $user $passwd
-ls
+$dir
+pwd
 binary
 put $file
 quit
 EOT
 
+if [[ `grep "226 Transfer complete" ftp.log` ]]
+then
+	echo "Transfer of $file complete"
+else
+	echo "Transfer of $file failed"
+	exit 1
+fi
 
 exit 0
 
