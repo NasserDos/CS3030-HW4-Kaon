@@ -155,26 +155,32 @@ fi
 
 
 #FTP to server.
+pushd temp
+
 if [[ ! -z $user && ! -z $passwd ]]
 then
-	./kaon_hw4_ftp.sh -f temp/MOCK_DATA_FILTER_$ts.zip -u $user -p $passwd
+	../kaon_hw4_ftp.sh -f MOCK_DATA_FILTER_$ts.zip -u $user -p $passwd
 
 	if [[ $? -ne 0 ]]
 	then
 		echo "There was an error FTPing to the server." >&2
+		popd
 		clean
 		exit 2
 	fi
 else
-	./kaon_hw4_ftp.sh -f temp/MOCK_DATA_FILTER_$ts.zip
+	../kaon_hw4_ftp.sh -f MOCK_DATA_FILTER_$ts.zip
 
 	if [[ $? -ne 0 ]]
 	then
 		echo "There was an error FTPing to the server." >&2
+		popd
 		clean
 		exit 2
 	fi
 fi
+
+popd
 
 
 #Email success message to disignated email address
