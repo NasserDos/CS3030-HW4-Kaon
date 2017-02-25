@@ -63,21 +63,42 @@ then
 	echo "Incorrect year, input 2015 or 2016"
 	usage
 fi
+
 if [[ $year == 2015 ]]
 then
 	year2=2016
 	./kaon_hw4_wget.sh $year
+	
+	if [[ ! $? ]]
+	then
+		echo "There was an error retrieving the file from wget." >&2
+		exit 2
+	fi
+	
 	./kaon_hw4_wget.sh $year2
+	
+	if [[ ! $? ]]
+	then
+		echo "There was an error retrieving the file from wget." >&2
+		exit 2
+	fi
 else
 	year2=2015
 	./kaon_hw4_wget.sh $year
+	
+	if [[ ! $? ]]
+	then
+		echo "There was an error retrieving the file from wget." >&2
+		exit 2
+	fi
+	
 	./kaon_hw4_wget.sh $year2
-fi
 
-if [[ ! $? ]]
-then
-	echo "There was an error retrieving the file from wget." >&2
-	exit 2
+	if [[ ! $? ]]
+	then
+		echo "There was an error retrieving the file from wget." >&2
+		exit 2
+	fi
 fi
 
 
@@ -90,17 +111,20 @@ then
 	exit 2
 fi
 
+
 #Loop for shortening Files
 ts=`date +%Y_%m_%d_%H:%M`
 for i in temp/*
 do
 	./kaon_hw4.awk $i >> temp/MOCK_DATA_FILTER_$ts.txt
+
+	if [[ ! $? ]]
+	then
+		echo "There was an error shortening the files." >&2
+		exit 2
+	fi
 done
-if [[ ! $? ]]
-then
-	echo "There was an error shortening the files." >&2
-	exit 2
-fi
+
 
 #Zip the Final File
 ./kaon_hw4_zip.sh
@@ -110,26 +134,41 @@ then
 	exit 2
 fi
 
+
 #FTP to server.
 if [[ ! -z $user && ! -z $passwd ]]
 then
 	./kaon_hw4_ftp.sh -f temp/MOCK_DATA_FILTER_$ts.zip -u $user -p $passwd
+
+	if [[ ! $? ]]
+	then
+		echo "There was an error FTPing to the server." >&2
+		exit 2
+	fi
 else
 	./kaon_hw4_ftp.sh -f temp/MOCK_DATA_FILTER_$ts.zip
+
+	if [[ ! $? ]]
+	then
+		echo "There was an error FTPing to the server." >&2
+		exit 2
+	fi
 fi
 
-if [[ ! $? ]]
-then
-	echo "There was an error FTPing to the server." >&2
-	exit 2
-fi
 
 #Email success message to disignated email address
-ftpServ=`hostname`
+ftpServ="192.137.190.19.91"
 echo "Sending email to $email"
 mail -s "Successful!" $email << END_MAIL
 Successfully transferred file to FTP $ftpServ server
 END_MAIL
+
+if [[ ! $? ]]
+then
+	echo "There was an error sending the email." >&2
+	exit 2
+fi
+
 
 #Very Last Thing (Commented out so we can test other files) Cleans the Mess
 ./kaon_hw4_clean.sh
