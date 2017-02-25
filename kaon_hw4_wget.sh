@@ -11,8 +11,10 @@
 #  REQUIREMENTS: ---
 #          BUGS: ---
 #         NOTES: ---
-#        AUTHOR: Nasser Binshabeeb 
-#  ORGANIZATION: 
+#       AUTHORS: Jeremy Johnson, jeremyjohnson7@mail.weber.edu
+#                Nasser Binshabeeb, nasserbinshabeeb@mail.weber.edu
+#                Trevor Orgill, __USERNAME__@mail.weber.edu
+#  ORGANIZATION: WSU
 #       CREATED: 02/22/2017 21:27
 #      REVISION:  ---
 #===============================================================================
@@ -24,7 +26,7 @@ target=http://icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$1.tar.gz
 
 help(){
  echo "Usage   ./kaon_hw4_wget.sh <input> "
-
+  exit 1
 }
 
 #-q will silence the messages associated with wget 
