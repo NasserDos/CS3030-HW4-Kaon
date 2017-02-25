@@ -23,7 +23,18 @@
 
 timestamp=`date +%Y_%m_%d_%H:%M`
 
-zip temp/MOCK_DATA_FILTER_$timestamp.zip temp/MOCK_DATA_FILTER_$timestamp.txt
+help(){
+	echo "Usage $0 <file>"
+	exit 1
+}
+
+if [[ $# -ne 1 ]]
+then
+	help
+fi
+
+
+zip temp/MOCK_DATA_FILTER_$timestamp.zip $1
 
 exit 0
 
