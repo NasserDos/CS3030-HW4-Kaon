@@ -25,6 +25,17 @@ usage() {
 	exit 1
 }
 
+#Very Last Thing (Commented out so we can test other files) Cleans the Mess
+clean() {
+	./kaon_hw4_clean.sh
+	if [[ $? -ne 0 ]]
+	then
+		echo "There was an error cleaning the mess." >&2
+		exit 2
+	fi
+}
+
+
 # Help parameter
 if [[ $1 == "--help" ]]
 then
@@ -72,6 +83,7 @@ then
 	if [[ $? -ne 0 ]]
 	then
 		echo "There was an error retrieving the file from wget." >&2
+		clean
 		exit 2
 	fi
 	
@@ -80,6 +92,7 @@ then
 	if [[ $? -ne 0 ]]
 	then
 		echo "There was an error retrieving the file from wget." >&2
+		clean
 		exit 2
 	fi
 else
@@ -89,6 +102,7 @@ else
 	if [[ $? -ne 0 ]]
 	then
 		echo "There was an error retrieving the file from wget." >&2
+		clean
 		exit 2
 	fi
 	
@@ -97,6 +111,7 @@ else
 	if [[ $? -ne 0 ]]
 	then
 		echo "There was an error retrieving the file from wget." >&2
+		clean
 		exit 2
 	fi
 fi
@@ -108,6 +123,7 @@ fi
 if [[ $? -ne 0 ]]
 then
 	echo "There was an error expanding the files." >&2
+	clean
 	exit 2
 fi
 
@@ -121,6 +137,7 @@ do
 	if [[ $? -ne 0 ]]
 	then
 		echo "There was an error shortening the files." >&2
+		clean
 		exit 2
 	fi
 done
@@ -132,6 +149,7 @@ done
 if [[ $? -ne 0 ]]
 then
 	echo "There was an error zipping the file." >&2
+	clean
 	exit 2
 fi
 
@@ -144,6 +162,7 @@ then
 	if [[ $? -ne 0 ]]
 	then
 		echo "There was an error FTPing to the server." >&2
+		clean
 		exit 2
 	fi
 else
@@ -152,6 +171,7 @@ else
 	if [[ $? -ne 0 ]]
 	then
 		echo "There was an error FTPing to the server." >&2
+		clean
 		exit 2
 	fi
 fi
@@ -167,17 +187,10 @@ END_MAIL
 if [[ $? -ne 0 ]]
 then
 	echo "There was an error sending the email." >&2
+	clean
 	exit 2
 fi
 
-
-#Very Last Thing (Commented out so we can test other files) Cleans the Mess
-./kaon_hw4_clean.sh
-if [[ $? -ne 0 ]]
-then
-	echo "There was an error cleaning the mess." >&2
-	exit 2
-fi
 
 exit 0
 
