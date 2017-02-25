@@ -40,12 +40,15 @@ fi
 if [[ -e "MOCK_DATA_2016.tar.gz" ]]
 then
 	rm MOCK_DATA_2016.tar.gz
+	echo removed MOCK_DATA_2016.tar.gz
 fi
 if [[ -e "MOCK_DATA_2015.tar.gz" ]]
 then
 	rm MOCK_DATA_2015.tar.gz
+	echo removed MOCK_DATA_2015.tar.gz
 fi
 
+	echo Cleanup Complete
 
 exit 0
 
