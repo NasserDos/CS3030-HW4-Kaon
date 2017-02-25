@@ -1,2 +1,5 @@
 *.swp
+MOCK_DATA*
+temp/
+ftp.log
 

@@ -69,7 +69,7 @@ then
 	year2=2016
 	./kaon_hw4_wget.sh $year
 	
-	if [[ ! $? ]]
+	if [[ $? -ne 0 ]]
 	then
 		echo "There was an error retrieving the file from wget." >&2
 		exit 2
@@ -77,7 +77,7 @@ then
 	
 	./kaon_hw4_wget.sh $year2
 	
-	if [[ ! $? ]]
+	if [[ $? -ne 0 ]]
 	then
 		echo "There was an error retrieving the file from wget." >&2
 		exit 2
@@ -86,7 +86,7 @@ else
 	year2=2015
 	./kaon_hw4_wget.sh $year
 	
-	if [[ ! $? ]]
+	if [[ $? -ne 0 ]]
 	then
 		echo "There was an error retrieving the file from wget." >&2
 		exit 2
@@ -94,7 +94,7 @@ else
 	
 	./kaon_hw4_wget.sh $year2
 
-	if [[ ! $? ]]
+	if [[ $? -ne 0 ]]
 	then
 		echo "There was an error retrieving the file from wget." >&2
 		exit 2
@@ -105,7 +105,7 @@ fi
 # Expand Files
 ./kaon_hw4_expand.sh
 
-if [[ ! $? ]]
+if [[ $? -ne 0 ]]
 then
 	echo "There was an error expanding the files." >&2
 	exit 2
@@ -118,7 +118,7 @@ for i in temp/*
 do
 	./kaon_hw4.awk $i >> temp/MOCK_DATA_FILTER_$ts.txt
 
-	if [[ ! $? ]]
+	if [[ $? -ne 0 ]]
 	then
 		echo "There was an error shortening the files." >&2
 		exit 2
@@ -127,8 +127,9 @@ done
 
 
 #Zip the Final File
-./kaon_hw4_zip.sh
-if [[ ! $? ]]
+./kaon_hw4_zip.sh temp/MOCK_DATA_FILTER_$ts.txt
+
+if [[ $? -ne 0 ]]
 then
 	echo "There was an error zipping the file." >&2
 	exit 2
@@ -140,7 +141,7 @@ if [[ ! -z $user && ! -z $passwd ]]
 then
 	./kaon_hw4_ftp.sh -f temp/MOCK_DATA_FILTER_$ts.zip -u $user -p $passwd
 
-	if [[ ! $? ]]
+	if [[ $? -ne 0 ]]
 	then
 		echo "There was an error FTPing to the server." >&2
 		exit 2
@@ -148,7 +149,7 @@ then
 else
 	./kaon_hw4_ftp.sh -f temp/MOCK_DATA_FILTER_$ts.zip
 
-	if [[ ! $? ]]
+	if [[ $? -ne 0 ]]
 	then
 		echo "There was an error FTPing to the server." >&2
 		exit 2
@@ -163,7 +164,7 @@ mail -s "Successful!" $email << END_MAIL
 Successfully transferred file to FTP $ftpServ server
 END_MAIL
 
-if [[ ! $? ]]
+if [[ $? -ne 0 ]]
 then
 	echo "There was an error sending the email." >&2
 	exit 2
@@ -172,7 +173,7 @@ fi
 
 #Very Last Thing (Commented out so we can test other files) Cleans the Mess
 ./kaon_hw4_clean.sh
-if [[ ! $? ]]
+if [[ $? -ne 0 ]]
 then
 	echo "There was an error cleaning the mess." >&2
 	exit 2
