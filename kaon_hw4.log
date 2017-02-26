@@ -1,3 +1,101 @@
+commit 13a5e479649e4960eb4cf2f251bdbac9567d1e0a
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Sat Feb 25 21:13:54 2017 -0700
+
+    Before submission
+
+commit 226fc369ce4bfe9d890c4315e1d69ea8406046d0
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Sat Feb 25 17:42:17 2017 -0700
+
+    Updated readme
+
+commit 3fd44af3ad7c863855033777704cbe049db5dcb7
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Sat Feb 25 17:39:04 2017 -0700
+
+    Updated readme
+
+commit 9f1438ba27c54041dfbf22e51e7c09d0079e093b
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Sat Feb 25 17:37:54 2017 -0700
+
+    Updated readme
+
+commit 43d9eff662ac071a8cea4a3438ec29e6064e3b6d
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Sat Feb 25 17:34:34 2017 -0700
+
+    Updated readme
+
+commit c453101d58d2380e882e8a210096c4d8bb35f0cd
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Sat Feb 25 17:19:41 2017 -0700
+
+    Clean up if no errors
+
+commit 39b44776f797cb53386b2c7542688a8708d33baa
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Sat Feb 25 16:27:27 2017 -0700
+
+    Fixed ftp bug
+
+commit 8890819e4ef6c7a54d44fc7e7898794af6970e5b
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Sat Feb 25 16:07:56 2017 -0700
+
+    Clean up when there is an error
+
+commit 483276b4e047ea1d2e06f7d44900962a24d117db
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Sat Feb 25 16:03:48 2017 -0700
+
+    Zip arguments
+
+commit 79dc9058a2fc5add6af8cbb19904c4eb35139f7f
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Sat Feb 25 15:58:45 2017 -0700
+
+    More error checking
+
+commit 1f4c94a189f8d74dc133f87c1ba00680b63a1671
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Sat Feb 25 15:16:59 2017 -0700
+
+    Error checking
+
+commit 621e5e46269ab3b75d5e1ad797f263a510b21a7e
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Sat Feb 25 14:16:52 2017 -0700
+
+    FTP
+
+commit 2c9cde7879b42038d5860913f62e766ce5ebdf0f
+Author: Jeremy J. Johnson <jeremyjohnson7@mail.weber.edu>
+Date:   Sat Feb 25 10:00:19 2017 -0700
+
+    Comments
+
+commit 8a1a92991b0cf85f83c1c9b4eb757ba1df971fd6
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Sat Feb 25 09:01:39 2017 -0700
+
+    Update kaon_hw4_clean.sh
+    
+    added echo statements
+
+commit 19594ebe0cf6e7c2eaf65c31dcc0e7674723676c
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Sat Feb 25 08:51:33 2017 -0700
+
+    Update kaon_hw4_wget.sh
+
+commit 8aa20e2cc35bdea814169ba7689a05156a13cfa7
+Author: Trevor Orgill <trevororgill@weber.edu>
+Date:   Fri Feb 24 15:17:06 2017 -0700
+
+    Updated Log File and added cronjob
+
 commit b9095187527130702f74d506ee665ac42e74edca
 Author: Trevor Orgill <trevororgill@weber.edu>
 Date:   Fri Feb 24 09:57:54 2017 -0700
