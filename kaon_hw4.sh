@@ -25,7 +25,7 @@ usage() {
 	exit 1
 }
 
-#Very Last Thing (Commented out so we can test other files) Cleans the Mess
+# Clean up temporary files
 clean() {
 	./kaon_hw4_clean.sh
 	if [[ $? -ne 0 ]]
@@ -128,7 +128,7 @@ then
 fi
 
 
-#Loop for shortening Files
+#Loop for filtering Files
 ts=`date +%Y_%m_%d_%H:%M`
 for i in temp/*
 do
@@ -136,7 +136,7 @@ do
 
 	if [[ $? -ne 0 ]]
 	then
-		echo "There was an error shortening the files." >&2
+		echo "There was an error filtering the files." >&2
 		clean
 		exit 2
 	fi
@@ -196,6 +196,10 @@ then
 	clean
 	exit 2
 fi
+
+
+#Very Last Thing Cleans the Mess
+clean
 
 
 exit 0
