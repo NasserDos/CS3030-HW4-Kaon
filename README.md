@@ -71,5 +71,9 @@ Cleans up the huge mess we just made.
 Usage ./kaon_hw4_clean.sh
 ```
 
+### kaon\_hw4\_cronjob.txt
+
+Contains the line to schedule the job in the crontab. 
+
 
 
