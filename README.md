@@ -1,5 +1,10 @@
-# CS3030-HW4-Kaon
-Homework 4
+# Kaon
+CS 3030 &ndash; Homework 4
+
+Jeremy Johnson, jeremyjohnson7@mail.weber.edu
+Nasser Binshabeeb, nasserbinshabeeb@mail.weber.edu
+Trevor Orgill, trevororgill@mail.weber.edu
+
 
 Implementation:
 
